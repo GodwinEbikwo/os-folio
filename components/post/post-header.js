@@ -144,16 +144,23 @@ const PostLeft = styled.aside`
 const PostLeftInner = styled.div`
   h1 {
     position: absolute;
-    bottom: 0;
+    bottom: -2rem;
     left: 1rem;
     mix-blend-mode: difference;
     z-index: 2;
+
+    @media (min-width: 768px) {
+      bottom: 0;
+    }
   }
 `;
 
 const PostImageBox = styled.div`
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
   z-index: 1;
+  @media (min-width: 768px) {
+    margin-bottom: 3.5rem;
+  }
 `;
 
 const PostTitle = styled.h1`
@@ -228,6 +235,5 @@ const PostRightBottom = styled.div`
       background: var(--white);
       margin-top: 0.75rem;
     }
-    
   }
 `;

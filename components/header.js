@@ -104,7 +104,7 @@ const HeaderWork = styled(m.aside)`
 
   @media (min-width: 700px) {
     width: 65%;
-    border-right: 1px dotted var(--border-color);
+    border-right: 1px solid var(--border-color);
   }
 
   .h-work-content {
@@ -183,7 +183,7 @@ const HeaderInfoContentTop = styled.div`
   @media (min-width: 700px) {
     padding-top: 5vw;
     height: 50%;
-    border-bottom: 1px dotted var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .h-about-me {

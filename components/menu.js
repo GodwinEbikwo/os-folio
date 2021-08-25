@@ -202,7 +202,7 @@ export const Overlay = styled.div`
   height: 100%;
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(10, 10, 10, 0.5);
-  z-index: 3;
+  z-index: 4;
   transition: opacity 1s cubic-bezier(0.77, 0, 0.18, 1),
     visibility 1s cubic-bezier(0.77, 0, 0.18, 1);
   cursor: pointer;

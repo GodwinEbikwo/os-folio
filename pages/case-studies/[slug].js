@@ -107,7 +107,7 @@ const PostContainerBox = styled.div`
   margin-top: var(--spacer-lg);
   margin-left: auto;
   margin-right: auto;
-  padding-top: 18vw;
+  padding-top: 4vw;
   padding-bottom: var(--spacer);
   min-height: 100vh;
 
@@ -116,7 +116,7 @@ const PostContainerBox = styled.div`
     padding-right: var(--golden-ratio);
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     padding-top: var(--spacer);
   }
 `;
