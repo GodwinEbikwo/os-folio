@@ -115,7 +115,7 @@ const HeaderWork = styled(m.aside)`
       align-items: center;
       align-content: flex-start;
       justify-content: center;
-      padding: calc(var(--spacer-lg) * 2);
+      padding: var(--golden-ratio);
       position: sticky;
       top: 0;
       height: 66.666666vh;
@@ -124,6 +124,7 @@ const HeaderWork = styled(m.aside)`
 
       @media (min-width: 700px) {
         height: 100vh;
+        padding: calc(var(--spacer-lg) * 2);
       }
     }
 
@@ -152,7 +153,7 @@ const HeaderInfo = styled(m.aside)`
 `;
 
 const HeaderInfoContent = styled.div`
-  height: 96.666666vh;
+  height: 76.666666vh;
   position: relative;
 
   @media (min-width: 700px) {
