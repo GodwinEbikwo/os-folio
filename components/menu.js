@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import styled from 'styled-components';
-import { m } from 'framer-motion';
-import FancySpan from './fancy-span';
+import Link from "next/link";
+import styled from "styled-components";
+import { m } from "framer-motion";
+import FancySpan from "./fancy-span";
 
 const variantsAni = {
   enter: {
@@ -14,9 +14,9 @@ const variantsAni = {
 };
 
 const revealIn = {
-  initial: { x: '110%', opacity: 0 },
+  initial: { x: "110%", opacity: 0 },
   enter: {
-    x: '0%',
+    x: "0%",
     opacity: 1,
     transition: {
       duration: 0.85,
@@ -24,7 +24,7 @@ const revealIn = {
     },
   },
   exit: {
-    x: '110%',
+    x: "110%",
     transition: { duration: 0.75, ease: [0.77, 0, 0.175, 1] },
   },
 };
@@ -36,16 +36,18 @@ export default function Menu({ open, setOpen }) {
         <m.ul
           className="scroll-container"
           initial={false}
-          animate={open ? 'enter' : 'exit'}
+          animate={open ? "enter" : "exit"}
           exit="exit"
-          variants={variantsAni}>
+          variants={variantsAni}
+        >
           <li>
             <Link href="/projects">
               <a
                 aria-label="navigate to the work page"
-                onClick={() => setOpen(!open)}>
+                onClick={() => setOpen(!open)}
+              >
                 <FancySpan>
-                  <m.span className="block" variants={revealIn}>
+                  <m.span className="inline-block" variants={revealIn}>
                     Work
                   </m.span>
                 </FancySpan>
@@ -57,9 +59,10 @@ export default function Menu({ open, setOpen }) {
             <Link href="/about">
               <a
                 aria-label="navigate to the about page"
-                onClick={() => setOpen(!open)}>
+                onClick={() => setOpen(!open)}
+              >
                 <FancySpan>
-                  <m.span className="block" variants={revealIn}>
+                  <m.span className="inline-block" variants={revealIn}>
                     About
                   </m.span>
                 </FancySpan>
@@ -71,9 +74,10 @@ export default function Menu({ open, setOpen }) {
             <Link href="/contact">
               <a
                 aria-label="navigate to the contact page"
-                onClick={() => setOpen(!open)}>
+                onClick={() => setOpen(!open)}
+              >
                 <FancySpan>
-                  <m.span className="block" variants={revealIn}>
+                  <m.span className="inline-block" variants={revealIn}>
                     Contact
                   </m.span>
                 </FancySpan>
@@ -88,16 +92,18 @@ export default function Menu({ open, setOpen }) {
               aria-label="navigate to instagram"
               href="/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               Instagram
             </a>
-            <span className="block sm-spacing">&bull;</span>
+            <span className="inline-block sm-spacing">&bull;</span>
             <span className="block sm-spacing">
               <a
                 aria-label="navigate to twitter"
                 href="/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 Twitter
               </a>
             </span>
@@ -107,7 +113,8 @@ export default function Menu({ open, setOpen }) {
                 aria-label="navigate to contact page"
                 href="/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 Contact
               </a>
             </span>
@@ -122,7 +129,6 @@ export default function Menu({ open, setOpen }) {
 
 const MenuRight = styled.aside`
   position: fixed;
-  background-color: var(--bg);
   height: 100vh;
   top: 0;
   right: 0;
@@ -146,17 +152,28 @@ const MenuRight = styled.aside`
     `};
 
   .scroll-container {
-    padding: 90px 20px;
+    padding: calc(var(--spacer-lg) * 1.5) var(--spacer);
+
+    &:hover > li {
+      transition: opacity 400ms;
+      opacity: 0.5;
+    }
+
+    &:hover > li:hover {
+      opacity: 1;
+      color: var(--accent-1);
+    }
+
     li {
       a {
         font-family: var(--font-2);
+        font-weight: var(--font-sm);
         font-size: 10vw;
-        letter-spacing: var(--ls-md);
+        text-transform: capitalize;
+        text-align: right;
+        letter-spacing: var(--ls-lg);
         @media (min-width: 768px) {
           font-size: 3.5vw;
-          font-weight: var(--font-sm);
-          text-transform: capitalize;
-          text-align: right;
         }
       }
     }
@@ -168,7 +185,7 @@ const MenuRight = styled.aside`
     bottom: var(--golden-ratio);
     right: var(--golden-ratio);
     align-items: center;
-    font-size: 1.3rem
+    font-size: 1.3rem;
   }
 `;
 
@@ -183,11 +200,12 @@ export const Overlay = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(10, 10, 10, 0.5);
   z-index: 3;
   transition: opacity 1s cubic-bezier(0.77, 0, 0.18, 1),
     visibility 1s cubic-bezier(0.77, 0, 0.18, 1);
   cursor: pointer;
   ${(props) =>
-    props.open && `opacity: 1; visibility: visible; transition-delay: 0.1s;`};
+    props.open && `opacity: 1; visibility: visible; transition-delay: 0.01s;`};
 `;

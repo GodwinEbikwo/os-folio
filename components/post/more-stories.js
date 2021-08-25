@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import PostPreview from './post-preview';
+import styled from "styled-components";
+import PostPreview from "./post-preview";
 
 export default function MoreStories({ posts }) {
   return (
     <MoreSoriesBox className="px-2 mx-auto relative">
-      <MoreTitle>More Stories</MoreTitle>
+      <MoreTitle>More Work</MoreTitle>
       <MoreGrid>
         {posts.map((post) => (
           <PostPreview
@@ -25,8 +25,8 @@ const MoreSoriesBox = styled.div`
 `;
 
 const MoreTitle = styled.h2`
-  font-size: 4rem;
-  text-align: center;
+  font-family: var(--font-2);
+  text-align: left;
   line-height: 1;
   font-weight: var(--font-lg);
   letter-spacing: var(--ls-md);
@@ -35,8 +35,6 @@ const MoreTitle = styled.h2`
 
   @media (min-width: 768px) {
     font-size: 4.5rem;
-    text-align: left;
-    line-height: 1;
   }
 `;
 

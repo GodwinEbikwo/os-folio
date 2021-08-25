@@ -1,5 +1,5 @@
-import Document, { Head, Html, NextScript, Main } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Head, Html, NextScript, Main } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
             rel="stylesheet"
           />
         </Head>

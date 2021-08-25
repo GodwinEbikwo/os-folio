@@ -24,12 +24,14 @@ const StyledBurger = styled.button`
   background: transparent;
   border: none;
   padding: 0;
+ 
 
   &:focus {
     outline: none;
   }
 
   div {
+   
     width: 3rem;
     height: 1.125px;
     background: ${({ open }) =>
@@ -38,6 +40,7 @@ const StyledBurger = styled.button`
     position: relative;
     transform-origin: 6px;
     will-change: transform;
+    mix-blend-mode: difference;
 
     :first-child {
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};

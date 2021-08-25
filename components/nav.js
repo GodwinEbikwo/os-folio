@@ -1,8 +1,9 @@
-import Menu from './menu';
-import Burger from './burger';
-import { useState } from 'react';
-import styled from 'styled-components';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
+import Link from "next/link";
+import Menu from "./menu";
+import Burger from "./burger";
+import { useState } from "react";
+import styled from "styled-components";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,11 @@ export default function Nav() {
       <m.nav initial="initial" animate="enter" exit="exit">
         <HeaderNav className="w-full">
           <div className="flex space-between align-center px-2">
-            <h3 className="h-nav-labels">SS ❊</h3>
+            <Link href="/">
+              <a>
+                <h4 className="h-nav-labels">MM ❊</h4>
+              </a>
+            </Link>
             <Burger open={open} setOpen={setOpen} />
           </div>
         </HeaderNav>
@@ -28,10 +33,13 @@ const HeaderNav = styled.div`
   top: 0;
   left: 0;
   z-index: 100;
-  background: var(--bg);
-  border-bottom: 1px dotted var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 
   .h-nav-labels {
     letter-spacing: var(--ls-md);
+  }
+
+  &.bg {
+    background: var(--bg);
   }
 `;

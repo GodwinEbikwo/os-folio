@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { m } from 'framer-motion';
 import { fade, revealInOut } from '@/helpers/transition';
 import { SplitText } from '@/helpers/split-text';
-import PostPreview from './post/post-preview';
+import PostPreview from '../post/post-preview';
 import Image from 'next/image';
-import Tabs from './unused/tabs';
-import FancySpan from './fancy-span';
+import Tabs from './tabs';
+import FancySpan from '../fancy-span';
 
 export default function Hero() {
   return (

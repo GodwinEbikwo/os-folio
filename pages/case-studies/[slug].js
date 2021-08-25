@@ -1,18 +1,21 @@
-import Head from 'next/head';
-import { useRef } from 'react';
-import Nav from '@/components/nav';
-import ErrorPage from 'next/error';
-import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import Layout from '@/components/layout';
-import { fade } from '@/helpers/transition';
-import { options } from '@/lib/scroll-config';
-import markdownToHtml from '@/lib/markdownToHtml';
-import PostTitle from '@/components/post/post-title';
-import PostHeader from '@/components/post/post-header';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
+import Head from "next/head";
+import { useRef } from "react";
+import Nav from "@/components/nav";
+import ErrorPage from "next/error";
+import styled from "styled-components";
+import { useRouter } from "next/router";
+import Layout from "@/components/layout";
+import { fade } from "@/helpers/transition";
+import { options } from "@/lib/scroll-config";
+import markdownToHtml from "@/lib/markdownToHtml";
+import PostTitle from "@/components/post/post-title";
+import PostHeader from "@/components/post/post-header";
+import MoreStories from "@/components/post/more-stories";
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { getAllPostsWithSlug, getPostAndMorePosts } from "@/lib/api";
+import { Seperator } from "@/components/seperator";
+
 
 export default function PostPage({ post, morePosts, preview }) {
   const containerRef = useRef(null);
@@ -26,7 +29,8 @@ export default function PostPage({ post, morePosts, preview }) {
       <LocomotiveScrollProvider
         options={options}
         containerRef={containerRef}
-        watch={[]}>
+        watch={[]}
+      >
         <main data-scroll-container ref={containerRef} id="scroll-container">
           <section data-scroll-section>
             <LazyMotion features={domAnimation}>
@@ -34,7 +38,8 @@ export default function PostPage({ post, morePosts, preview }) {
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}>
+                variants={fade}
+              >
                 <PostContainerBox>
                   {router.isFallback ? (
                     <div className="center">
@@ -57,10 +62,10 @@ export default function PostPage({ post, morePosts, preview }) {
                           content={post.content}
                         />
                       </m.article>
-
-                      {/* {morePosts.length > 0 && (
+                      <Seperator />
+                      {morePosts.length > 0 && (
                         <MoreStories posts={morePosts} />
-                      )} */}
+                      )}
                     </>
                   )}
                 </PostContainerBox>
@@ -75,7 +80,7 @@ export default function PostPage({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview);
-  const content = await markdownToHtml(data?.post?.content || '');
+  const content = await markdownToHtml(data?.post?.content || "");
 
   return {
     props: {

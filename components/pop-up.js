@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default function PopUp() {
   return (
@@ -6,8 +6,8 @@ export default function PopUp() {
       <div className="pop-up">
         <div className="pop-up-inner">
           <div className="pop-up-header">
-            <div class="banner">
-              <div class="banner_inner">
+            <div className="banner">
+              <div className="banner_inner">
                 <p>
                   Hire me - Hire me - Hire me - Hire me - Hire me - Hire me -
                   Hire me - Hire me - Hire me - Hire me - Hire me - Hire me -
@@ -45,15 +45,16 @@ export default function PopUp() {
           <div className="pop-up-middle">
             <div
               className="w-full relative"
-              style={{ height: 0, paddingBottom: '75%' }}>
+              style={{ height: 0, paddingBottom: "75%" }}
+            >
               <iframe
                 src="https://giphy.com/embed/11ISwbgCxEzMyY"
                 width="100%"
                 height="100%"
                 className="absolute"
                 frameBorder="0"
-                class="giphy-embed"
-                allowFullScreen></iframe>
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
           <div className="pop-footer">
@@ -72,15 +73,16 @@ export default function PopUp() {
           <div className="pop-up-middle">
             <div
               className="w-full relative"
-              style={{ height: 0, paddingBottom: '56%' }}>
+              style={{ height: 0, paddingBottom: "56%" }}
+            >
               <iframe
                 src="https://giphy.com/embed/pWIak75z5nNWU"
                 width="100%"
                 height="100%"
                 className="absolute"
                 frameBorder="0"
-                class="giphy-embed"
-                allowFullScreen></iframe>
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
 
@@ -106,7 +108,7 @@ const PopUpContainer = styled.div`
 
     &.pop-two {
       top: 300px;
-      left: 550px;
+      left: 475px;
       height: 260px;
     }
 

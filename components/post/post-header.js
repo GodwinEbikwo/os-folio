@@ -1,14 +1,14 @@
-import { m } from 'framer-motion';
-import { ProjectCoverImage } from './cover-image';
-import styled from 'styled-components';
-import { SplitText } from '@/helpers/split-text';
-import FancySpan from '../fancy-span';
-import PostBody from './post-body';
+import { m } from "framer-motion";
+import { ProjectCoverImage } from "./cover-image";
+import styled from "styled-components";
+import { SplitText } from "@/helpers/split-text";
+import FancySpan from "../fancy-span";
+import PostBody from "./post-body";
 
 export const enterIn = {
-  initial: { y: '110%', opacity: 0 },
+  initial: { y: "110%", opacity: 0 },
   enter: {
-    y: '0%',
+    y: "0%",
     opacity: 1,
     transition: {
       delay: 0.375,
@@ -17,7 +17,7 @@ export const enterIn = {
     },
   },
   exit: {
-    y: '110%',
+    y: "110%",
     transition: { ease: [0.77, 0, 0.175, 1] },
   },
 };
@@ -30,18 +30,19 @@ export default function PostHeader({ title, coverImage, content }) {
       exit="exit"
       variants={{
         enter: { transition: { staggerChildren: 0.09, delay: 0.2 } },
-      }}>
+      }}
+    >
       <PostGrid>
         <PostLeft>
           <PostLeftInner>
             <PostTitle>
               <SplitText
-                initial={{ x: '-110%', opacity: 0 }}
+                initial={{ y: "110%", opacity: 0 }}
                 animate="enter"
-                exit={{ x: '110%' }}
+                exit={{ y: "110%" }}
                 variants={{
                   enter: (i) => ({
-                    x: '0%',
+                    y: "0%",
                     opacity: 1,
                     transition: {
                       duration: 1.3,
@@ -49,7 +50,8 @@ export default function PostHeader({ title, coverImage, content }) {
                       delay: i * 0.05,
                     },
                   }),
-                }}>
+                }}
+              >
                 {title}
               </SplitText>
             </PostTitle>
@@ -148,8 +150,6 @@ const PostLeftInner = styled.div`
     mix-blend-mode: difference;
     z-index: 2;
   }
-
-  
 `;
 
 const PostImageBox = styled.div`
@@ -180,14 +180,13 @@ const PostRightInner = styled.div`
 
   @media (min-width: 768px) {
     height: 45%;
-    /* border-bottom: 1px dotted var(--border-color); */
   }
 
   h5 {
     &::after {
       height: 1px;
       width: 2.5rem;
-      content: '';
+      content: "";
       display: block;
       background: var(--white);
       margin-top: 0.75rem;
@@ -195,6 +194,7 @@ const PostRightInner = styled.div`
   }
 
   ul {
+    margin-top: var(--spacer-md);
     li {
       margin-top: var(--spacer);
       & > span {
@@ -217,13 +217,18 @@ const PostRightBottom = styled.div`
   }
 
   h5 {
+    margin-top: var(--spacer-md);
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
     &::after {
       height: 1px;
       width: 2.5rem;
-      content: '';
+      content: "";
       display: block;
       background: var(--white);
       margin-top: 0.75rem;
     }
+    
   }
 `;
