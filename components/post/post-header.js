@@ -2,7 +2,6 @@ import { m } from "framer-motion";
 import { ProjectCoverImage } from "./cover-image";
 import styled from "styled-components";
 import { SplitText } from "@/helpers/split-text";
-import FancySpan from "../fancy-span";
 import PostBody from "./post-body";
 
 export const enterIn = {
