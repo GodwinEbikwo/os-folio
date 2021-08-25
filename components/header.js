@@ -1,11 +1,10 @@
 import PopUp from "./pop-up";
 import { m } from "framer-motion";
-import FancySpan from "./fancy-span";
 import styled from "styled-components";
 import PostPreview from "./post/post-preview";
 import { SplitText } from "@/helpers/split-text";
 import { HeaderImage } from "./post/cover-image";
-import { fade, revealInOut } from "@/helpers/transition";
+import { fade } from "@/helpers/transition";
 
 export default function Header({ posts, title, responsiveImage }) {
   return (
