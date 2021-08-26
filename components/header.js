@@ -209,7 +209,7 @@ const HeaderInfoContentTopTitle = styled.h3`
   font-family: var(--font-2);
   font-weight: var(--font-md);
   text-align: left;
-  font-size: 7vw;
+  font-size: 8.2vw;
   font-weight: 400;
   @media (min-width: 700px) {
     font-size: 4vw;
