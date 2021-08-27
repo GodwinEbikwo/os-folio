@@ -57,7 +57,7 @@ const FloatingMenu = styled.div`
   border-radius: 50%;
   position: fixed;
   bottom: calc(var(--golden-ratio) * 4);
-  left: var(--golden-ratio);
+  right: var(--golden-ratio);
   display: flex;
   align-items: center;
   justify-content: center;

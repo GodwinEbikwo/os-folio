@@ -85,41 +85,6 @@ export default function Menu({ open, setOpen }) {
             </Link>
           </li>
         </m.ul>
-
-        <footer>
-          <div className="flex">
-            <a
-              aria-label="navigate to instagram"
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-            <span className="inline-block sm-spacing">&bull;</span>
-            <span className="block sm-spacing">
-              <a
-                aria-label="navigate to twitter"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </span>
-            <span className="block sm-spacing">&bull;</span>
-            <span className="block sm-spacing">
-              <a
-                aria-label="navigate to contact page"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contact
-              </a>
-            </span>
-          </div>
-        </footer>
       </MenuRight>
 
       <Overlay open={open} />
@@ -176,18 +141,6 @@ const MenuRight = styled.aside`
           font-size: 3.5vw;
         }
       }
-    }
-  }
-
-  footer {
-    text-transform: uppercase;
-    position: absolute;
-    bottom: calc(var(--golden-ratio) * 6);
-    right: var(--golden-ratio);
-    align-items: center;
-    font-size: 1.3rem;
-    @media (min-width: 768px) {
-      bottom: var(--golden-ratio);
     }
   }
 `;
