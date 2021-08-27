@@ -141,7 +141,7 @@ const HeaderWork = styled(m.aside)`
 `;
 
 const HeaderInfo = styled(m.aside)`
-  top: 30px;
+  top: 15px;
   right: 0;
   position: relative;
   width: auto;
