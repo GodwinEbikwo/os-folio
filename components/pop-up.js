@@ -35,7 +35,7 @@ export default function PopUp() {
         </div>
       </div>
 
-      <div className="pop-up pop-two">
+      {/* <div className="pop-up pop-two">
         <div className="pop-up-inner">
           <div className="pop-up-header">
             <span>I AM </span>
@@ -61,8 +61,8 @@ export default function PopUp() {
             <span>Godwin.a.ebikwo@gmail.com</span>
           </div>
         </div>
-      </div>
-
+      </div> */}
+{/* 
       <div className="pop-up pop-three">
         <div className="pop-up-inner">
           <div className="pop-up-header">
@@ -90,7 +90,7 @@ export default function PopUp() {
             <span>Godwin.a.ebikwo@gmail.com</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </PopUpContainer>
   );
 }
