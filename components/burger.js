@@ -9,8 +9,16 @@ export default function Burger({ open, setOpen }) {
       onClick={() => setOpen(!open)}
     >
       <div className="menu-lines" aria-hidden="true" className="bg-line-top" />
-      <div className="menu-lines" aria-hidden="true" className="bg-line-middle" />
-      <div className="menu-lines" aria-hidden="true" className="bg-line-bottom" />
+      <div
+        className="menu-lines"
+        aria-hidden="true"
+        className="bg-line-middle"
+      />
+      <div
+        className="menu-lines"
+        aria-hidden="true"
+        className="bg-line-bottom"
+      />
     </BurgerMenu>
   );
 }
@@ -31,29 +39,28 @@ const BurgerMenu = styled.button`
   }
 
   div {
+    width: 3rem;
     height: 1.125px;
-    background: ${({ open }) =>
-      open ? "var(--text-white)" : "var(--text-white)"};
+    background: var(--text-black);
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 6px;
     will-change: transform;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     :first-child {
-      width: 3rem;
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
     }
 
     :nth-child(2) {
-      width: 2rem;
       opacity: ${({ open }) => (open ? "0" : "1")};
       transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-      width: ${({ open }) => (open ? "3rem" : "1rem")};
+      margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
     }
   }
 `;

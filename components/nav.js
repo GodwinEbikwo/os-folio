@@ -9,7 +9,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <LazyMotion features={domAnimation}>
-      <m.nav initial="initial" animate="enter" exit="exit">
+      <m.nav initial="initial" animate="enter" exit="exit" className="relative">
         <HeaderNav className="w-full">
           <div className="flex space-between align-center px-2">
             <Link href="/">
@@ -17,9 +17,14 @@ export default function Nav() {
                 <h4 className="h-nav-labels">MM ❊</h4>
               </a>
             </Link>
-            <Burger open={open} setOpen={setOpen} />
+            <div className="hide-for-mobile">
+              <Burger open={open} setOpen={setOpen} />
+            </div>
           </div>
         </HeaderNav>
+        <FloatingMenu className="hide-for-desktop">
+          <Burger open={open} setOpen={setOpen} />
+        </FloatingMenu>
         <Menu open={open} setOpen={setOpen} />
       </m.nav>
     </LazyMotion>
@@ -42,4 +47,18 @@ const HeaderNav = styled.div`
   &.bg {
     background: var(--bg);
   }
+`;
+
+const FloatingMenu = styled.div`
+  background: var(--accent-1);
+  z-index: 100;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: calc(var(--golden-ratio) * 6);
+  left: var(--golden-ratio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
