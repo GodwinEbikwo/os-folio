@@ -1,9 +1,9 @@
-import { ContainerBox } from '@/components/container';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import Nav from '@/components/nav';
-import Layout from '@/components/layout';
-import Header from '@/components/header';
-import { getAllPostsForHome, getImageForHome } from '@/lib/api';
+import { ContainerBox } from "@/components/container";
+import { LazyMotion, domAnimation, m } from "framer-motion";
+import Nav from "@/components/nav";
+import Layout from "@/components/layout";
+import Header from "@/components/header";
+import { getAllPostsForHome, getImageForHome } from "@/lib/api";
 
 export default function HomePage({ allPosts, homeImage }) {
   const headerPost = allPosts;
@@ -36,6 +36,7 @@ export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) || [];
   const homeImage = (await getImageForHome()) || [];
   return {
+    revalidate: 500,
     props: { allPosts, homeImage },
   };
 }
