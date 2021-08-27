@@ -22,7 +22,7 @@ export default function Nav() {
             </div>
           </div>
         </HeaderNav>
-        <FloatingMenu className="hide-for-desktop">
+        <FloatingMenu>
           <Burger open={open} setOpen={setOpen} />
         </FloatingMenu>
         <Menu open={open} setOpen={setOpen} />
@@ -56,9 +56,12 @@ const FloatingMenu = styled.div`
   height: 5rem;
   border-radius: 50%;
   position: fixed;
-  bottom: calc(var(--golden-ratio) * 6);
+  bottom: calc(var(--golden-ratio) * 4);
   left: var(--golden-ratio);
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;

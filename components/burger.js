@@ -41,16 +41,18 @@ const BurgerMenu = styled.button`
   div {
     width: 3rem;
     height: 1.125px;
-    background: var(--text-black);
+    background: var(--text-white);
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 6px;
     will-change: transform;
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-      margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
+      @media (max-width: 768px) {
+        margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
+      }
     }
 
     :nth-child(2) {
@@ -60,7 +62,9 @@ const BurgerMenu = styled.button`
 
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-      margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
+      @media (max-width: 768px) {
+        margin-left: ${({ open }) => (open ? "0.15rem" : "0")};
+      }
     }
   }
 `;
