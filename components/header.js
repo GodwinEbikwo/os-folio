@@ -141,12 +141,13 @@ const HeaderWork = styled(m.aside)`
 `;
 
 const HeaderInfo = styled(m.aside)`
-  top: 0;
+  top: 30px;
   right: 0;
   position: relative;
   width: auto;
 
   @media (min-width: 700px) {
+    top: 0;
     position: fixed;
     width: 35%;
   }
