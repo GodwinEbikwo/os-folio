@@ -12,7 +12,7 @@ export default function AboutPage() {
         <section>
           <LazyMotion features={domAnimation}>
             <m.aside initial="initial" animate="enter" exit="exit">
-              <ContainerBox className="has-px has-mw">
+              <ContainerBox className="has-mw">
                 <About />
               </ContainerBox>
             </m.aside>

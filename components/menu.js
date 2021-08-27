@@ -182,10 +182,13 @@ const MenuRight = styled.aside`
   footer {
     text-transform: uppercase;
     position: absolute;
-    bottom: var(--golden-ratio);
+    bottom: calc(var(--golden-ratio) * 6);
     right: var(--golden-ratio);
     align-items: center;
     font-size: 1.3rem;
+    @media (min-width: 768px) {
+      bottom: var(--golden-ratio);
+    }
   }
 `;
 

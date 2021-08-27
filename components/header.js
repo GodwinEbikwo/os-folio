@@ -46,11 +46,11 @@ export default function Header({ posts, title, responsiveImage }) {
                         }),
                       }}
                     >
-                      I AM A DEVELOPER BASED IN LAGOS, NIGERIA FOCUSED ON
-                      CREATING INTERACTIVE DIGITAL EXPERIENCES ON THE WEB,
-                      WORKING WITH BRANDS AND INDUSTRY LEADERS SUCH AS DISNEY,
-                      PAYSTACK, PRINTIVO, AND WILD AMONGST OTHERS TO ACHIEVE
-                      THIS.
+                      I AM A DEVELOPER BASED IN Abuja, NIGERIA FOCUSED ON
+                      CREATING INTERACTIVE DIGITAL EXPERIENCES ON THE WEB.
+                      CURRENTLY, I am taking a break off full time employment and
+                      going to serve my country. However I am Open to small
+                      projects and a chat. (Gotta pay the bills) - Capitalism.
                     </SplitText>
                   </h5>
                 </div>
@@ -189,7 +189,7 @@ const HeaderInfoContentTop = styled.div`
 
   .h-about-me {
     @media (min-width: 700px) {
-      max-width: 27vw;
+      max-width: 28vw;
       position: absolute;
       bottom: var(--golden-ratio);
       left: var(--golden-ratio);
