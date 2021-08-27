@@ -1,20 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default function Burger({ open, setOpen }) {
   return (
-    <StyledBurger
+    <BurgerMenu
       title="menu"
       aria-label="hamburger menu"
       open={open}
-      onClick={() => setOpen(!open)}>
-      <div aria-hidden="true" className="bg-line-top" />
-      <div aria-hidden="true" className="bg-line-middle" />
-      <div aria-hidden="true" className="bg-line-bottom" />
-    </StyledBurger>
+      onClick={() => setOpen(!open)}
+    >
+      <div className="menu-lines" aria-hidden="true" className="bg-line-top" />
+      <div className="menu-lines" aria-hidden="true" className="bg-line-middle" />
+      <div className="menu-lines" aria-hidden="true" className="bg-line-bottom" />
+    </BurgerMenu>
   );
 }
 
-const StyledBurger = styled.button`
+const BurgerMenu = styled.button`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -24,18 +25,15 @@ const StyledBurger = styled.button`
   background: transparent;
   border: none;
   padding: 0;
- 
 
   &:focus {
     outline: none;
   }
 
   div {
-   
-    width: 3rem;
     height: 1.125px;
     background: ${({ open }) =>
-      open ? 'var(--text-white)' : 'var(--text-white)'};
+      open ? "var(--text-white)" : "var(--text-white)"};
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 6px;
@@ -43,16 +41,19 @@ const StyledBurger = styled.button`
     mix-blend-mode: difference;
 
     :first-child {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      width: 3rem;
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
+      width: 2rem;
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      width: ${({ open }) => (open ? "3rem" : "1rem")};
     }
   }
 `;

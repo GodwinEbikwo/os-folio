@@ -36,7 +36,7 @@ export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) || [];
   const homeImage = (await getImageForHome()) || [];
   return {
-    revalidate: 500,
+    revalidate: 200,
     props: { allPosts, homeImage },
   };
 }
