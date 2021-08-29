@@ -7,7 +7,11 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:locale" content="en_GB" />
         <title>Godwin - Portofolio</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="I AM A DEVELOPER FOCUSED ON CREATING INTERACTIVE DIGITAL
+          EXPERIENCES ON THE WORLD WIDE WEB."
+        />
         <meta
           name="Godwin Ebikwo | Front end developer"
           content="Godwin Ebikwo"

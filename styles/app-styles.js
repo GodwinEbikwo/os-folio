@@ -217,6 +217,7 @@ html,
     color: var(--text-white);
     font-family: var(--font);
     font-weight: 300;
+    font-size: 1.3rem;
 
     &.no-scroll {
       overflow-y: hidden;
