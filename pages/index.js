@@ -25,6 +25,7 @@ export default function HomePage({ allPosts, homeImage }) {
           name="keywords"
           content="Godwin Ebikwo, Front-end deceloper, JavaScript, JAMStack, Nextjs Framer motion, React "
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
         <section>
