@@ -24,7 +24,7 @@ export default function Menu({ open }) {
           variants={variantsAni}
         >
           <SplitText
-            initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+            initial={{ y: "110%", opacity: 0 }}
             animate={open ? "enter" : "exit"}
             exit={{
               y: "110%",
@@ -33,7 +33,6 @@ export default function Menu({ open }) {
               enter: (i) => ({
                 y: "0%",
                 opacity: 1,
-                rotate: "0deg",
                 transition: {
                   duration: 1.4,
                   ease: [0.77, 0, 0.175, 1],
@@ -50,7 +49,7 @@ export default function Menu({ open }) {
 
           <div style={{ marginTop: "var(--spacer)" }}>
             <SplitText
-              initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+              initial={{ y: "110%", opacity: 0 }}
               animate={open ? "enter" : "exit"}
               exit={{
                 y: "110%",
@@ -58,12 +57,11 @@ export default function Menu({ open }) {
               variants={{
                 enter: (i) => ({
                   y: "0%",
-                  rotate: "0deg",
                   opacity: 1,
                   transition: {
                     duration: 1.4,
                     ease: [0.77, 0, 0.175, 1],
-                    delay: i * 0.02,
+                    delay: i * 0.03,
                   },
                 }),
               }}
@@ -77,7 +75,7 @@ export default function Menu({ open }) {
 
           <div style={{ marginTop: "var(--spacer)" }}>
             <SplitText
-              initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+              initial={{ y: "110%", opacity: 0 }}
               animate={open ? "enter" : "exit"}
               exit={{
                 y: "110%",
@@ -85,12 +83,11 @@ export default function Menu({ open }) {
               variants={{
                 enter: (i) => ({
                   y: "0%",
-                  rotate: "0deg",
                   opacity: 1,
                   transition: {
                     duration: 1.4,
                     ease: [0.77, 0, 0.175, 1],
-                    delay: i * 0.02,
+                    delay: i * 0.04,
                   },
                 }),
               }}
@@ -137,7 +134,7 @@ const MenuRight = styled.aside`
     line-height: 1.55;
     text-transform: uppercase;
     @media (min-width: 768px) {
-     font-size: 0.8vw;
+      font-size: 0.8vw;
     }
   }
 
