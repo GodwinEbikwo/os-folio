@@ -39,9 +39,9 @@ export const AppStyles = createGlobalStyle`
   --ls-md: -0.03em;
   --ls-lg: -0.05em;
 
-  --spacing-small: 10px;
-  --spacing-medium: 20px;
-  --spacing-large: 30px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
 
   --spacer: 2rem;
   --spacer-md: 3rem;

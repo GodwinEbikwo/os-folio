@@ -8,7 +8,7 @@ import { fade } from "@/helpers/transition";
 
 export default function Header({ posts, title, responsiveImage }) {
   return (
-    <HeaderBox>
+    <HeaderBox role="header">
       <m.div className="h-grid" variants={fade}>
         <m.div>
           <HeaderInfo className="h-info">
@@ -39,18 +39,18 @@ export default function Header({ posts, title, responsiveImage }) {
                           y: "0%",
                           opacity: 1,
                           transition: {
-                            duration: 1.8,
+                            duration: 1.4,
                             ease: [0.77, 0, 0.175, 1],
                             delay: i * 0.02,
                           },
                         }),
                       }}
                     >
-                      I AM A DEVELOPER BASED IN Abuja, NIGERIA FOCUSED ON
-                      CREATING INTERACTIVE DIGITAL EXPERIENCES ON THE WEB.
-                      CURRENTLY, I am taking a break off full time employment and
-                      going to serve my country. However I am Open to small
-                      projects and a chat. (Gotta pay the bills) - Capitalism.
+                      I AM A DEVELOPER BASED FOCUSED ON CREATING INTERACTIVE
+                      DIGITAL EXPERIENCES ON THE WEB. CURRENTLY, I am taking a
+                      break off full time employment and going to serve my
+                      country. However I am Open to small projects and a chat.
+                      (Gotta pay the bills) - Capitalism.
                     </SplitText>
                   </h5>
                 </div>
@@ -190,7 +190,7 @@ const HeaderInfoContentTop = styled.div`
 
   .h-about-me {
     @media (min-width: 700px) {
-      max-width: 28vw;
+      max-width: 35vw;
       position: absolute;
       bottom: var(--golden-ratio);
       left: var(--golden-ratio);

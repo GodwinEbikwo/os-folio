@@ -9,7 +9,13 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <LazyMotion features={domAnimation}>
-      <m.nav initial="initial" animate="enter" exit="exit" className="relative">
+      <m.nav
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        className="relative"
+        role="navigation"
+      >
         <HeaderNav className="w-full">
           <div className="flex space-between align-center px-2">
             <Link href="/">
@@ -32,13 +38,16 @@ export default function Nav() {
 }
 
 const HeaderNav = styled.div`
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--border-color);
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid var(--border-color);
+  }
 
   .h-nav-labels {
     letter-spacing: var(--ls-md);
