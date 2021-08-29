@@ -9,13 +9,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <LazyMotion features={domAnimation}>
-      <m.nav
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        className="relative"
-        role="navigation"
-      >
+      <m.nav initial="initial" animate="enter" exit="exit" className="relative">
         <HeaderNav className="w-full">
           <div className="flex space-between align-center px-2">
             <Link href="/">
