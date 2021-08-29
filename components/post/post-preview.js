@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { PostPreviewImage } from "./cover-image";
-import Link from "next/link";
 
-export default function PostPreview({ title, coverImage, slug, link }) {
+export default function PostPreview({ title, coverImage, link }) {
   return (
     <ProjectContainer>
       <ProjectLink

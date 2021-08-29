@@ -8,86 +8,83 @@ import { fade } from "@/helpers/transition";
 
 export default function Header({ posts, title, responsiveImage }) {
   return (
-    <HeaderBox role="header">
-      <m.div className="h-grid" variants={fade}>
-        <m.div>
-          <HeaderInfo className="h-info">
-            <HeaderInfoContent>
-              <HeaderInfoContentTop>
-                <HeaderInfoContentTopTitle>
-                  <span>Mars</span>
-                  <br />
-                  <span>Mathew</span>
-                </HeaderInfoContentTopTitle>
+    <HeaderBox>
+      <m.div variants={fade}>
+        <HeaderInfo className="h-info">
+          <HeaderInfoContent>
+            <HeaderInfoContentTop>
+              <HeaderInfoContentTopTitle>
+                <span>Mars</span>
+                <br />
+                <span>Mathew</span>
+              </HeaderInfoContentTopTitle>
 
-                <div className="h-about-me">
-                  <div className="py-2">
-                    <h4>
-                      <span className="inline-block">✦ ✦ ✦ ✦ </span>
-                    </h4>
-                  </div>
-
-                  <h5>
-                    <SplitText
-                      initial={{ y: "110%", opacity: 0 }}
-                      animate="enter"
-                      exit={{
-                        y: "110%",
-                      }}
-                      variants={{
-                        enter: (i) => ({
-                          y: "0%",
-                          opacity: 1,
-                          transition: {
-                            duration: 1.4,
-                            ease: [0.77, 0, 0.175, 1],
-                            delay: i * 0.02,
-                          },
-                        }),
-                      }}
-                    >
-                      I AM A DEVELOPER FOCUSED ON CREATING INTERACTIVE DIGITAL
-                      EXPERIENCES ON THE WORLD WIDE WEB. CURRENTLY, I am taking
-                      a break FROM full time employment and going to serve my
-                      country (Nigeria). However I am Open to small projects and
-                      a chat. (Gotta pay the bills) - Capitalism.
-                    </SplitText>
-                  </h5>
+              <div className="h-about-me">
+                <div className="py-2">
+                  <h4>
+                    <span className="inline-block">✦ ✦ ✦ ✦ </span>
+                  </h4>
                 </div>
-              </HeaderInfoContentTop>
 
-              <div className="h-img">
-                <HeaderImage title={title} responsiveImage={responsiveImage} />
+                <h5>
+                  <SplitText
+                    initial={{ y: "110%", opacity: 0 }}
+                    animate="enter"
+                    exit={{
+                      y: "110%",
+                    }}
+                    variants={{
+                      enter: (i) => ({
+                        y: "0%",
+                        opacity: 1,
+                        transition: {
+                          duration: 1.4,
+                          ease: [0.77, 0, 0.175, 1],
+                          delay: i * 0.02,
+                        },
+                      }),
+                    }}
+                  >
+                    I AM A DEVELOPER FOCUSED ON CREATING INTERACTIVE DIGITAL
+                    EXPERIENCES ON THE WORLD WIDE WEB. CURRENTLY, I am taking a
+                    break FROM full time employment and going to serve my
+                    country (Nigeria). However I am Open to small projects and a
+                    chat. (Gotta pay the bills) - Capitalism.
+                  </SplitText>
+                </h5>
               </div>
-            </HeaderInfoContent>
-          </HeaderInfo>
+            </HeaderInfoContentTop>
 
-          <HeaderWork className="h-work">
-            <div className="h-work-content">
-              {posts.map((post) => (
-                <m.div className="h-work-middle" key={post.slug}>
-                  <PostPreview
-                    title={post.title}
-                    coverImage={post.coverImage}
-                    slug={post.slug}
-                    link={post.link}
-                  />
-                </m.div>
-              ))}
-
-              <m.div
-                className="h-work-middle"
-                style={{ backgroundColor: "var(--bg)", height: "100vh" }}
-              >
-                <PopUp />
-              </m.div>
-
-              <div className="h-work-bottom hide-for-mobile">
-                FOLIO 2021 - AVAILABLE WHEN YOU SEND THAT MAIL
-              </div>
+            <div className="h-img">
+              <HeaderImage title={title} responsiveImage={responsiveImage} />
             </div>
-          </HeaderWork>
-        </m.div>
+          </HeaderInfoContent>
+        </HeaderInfo>
+
+        <HeaderWork className="h-work">
+          <div className="h-work-content">
+            {posts.map((post) => (
+              <m.div className="h-work-middle" key={post.slug}>
+                <PostPreview
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  link={post.link}
+                />
+              </m.div>
+            ))}
+
+            <m.div
+              className="h-work-middle"
+              style={{ backgroundColor: "var(--bg)", height: "100vh" }}
+            >
+              <PopUp />
+            </m.div>
+
+            <div className="h-work-bottom hide-for-mobile">
+              FOLIO 2021 - AVAILABLE WHEN YOU SEND THAT MAIL
+            </div>
+          </div>
+        </HeaderWork>
       </m.div>
     </HeaderBox>
   );
@@ -215,17 +212,5 @@ const HeaderInfoContentTopTitle = styled.h3`
   @media (min-width: 700px) {
     font-size: 4vw;
     max-width: 35px;
-  }
-`;
-
-const ClosingTitle = styled.h3`
-  letter-spacing: var(--ls-lg);
-  line-height: 90%;
-  font-family: var(--font-2);
-  font-weight: var(--font-md);
-  text-align: left;
-  text-transform: uppercase;
-  @media (min-width: 700px) {
-    font-size: 4vw;
   }
 `;

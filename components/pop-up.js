@@ -34,63 +34,6 @@ export default function PopUp() {
           </div>
         </div>
       </div>
-
-      {/* <div className="pop-up pop-two">
-        <div className="pop-up-inner">
-          <div className="pop-up-header">
-            <span>I AM </span>
-            <span>COOL </span>
-          </div>
-
-          <div className="pop-up-middle">
-            <div
-              className="w-full relative"
-              style={{ height: 0, paddingBottom: "75%" }}
-            >
-              <iframe
-                src="https://giphy.com/embed/11ISwbgCxEzMyY"
-                width="100%"
-                height="100%"
-                className="absolute"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-          <div className="pop-footer">
-            <span>Godwin.a.ebikwo@gmail.com</span>
-          </div>
-        </div>
-      </div> */}
-      {/* 
-      <div className="pop-up pop-three">
-        <div className="pop-up-inner">
-          <div className="pop-up-header">
-            <span>IF YOU Dont hire me</span>
-            <span>YOu dont like idris</span>
-          </div>
-
-          <div className="pop-up-middle">
-            <div
-              className="w-full relative"
-              style={{ height: 0, paddingBottom: "56%" }}
-            >
-              <iframe
-                src="https://giphy.com/embed/pWIak75z5nNWU"
-                width="100%"
-                height="100%"
-                className="absolute"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-
-          <div className="pop-footer">
-            <span>Godwin.a.ebikwo@gmail.com</span>
-          </div>
-        </div>
-      </div> */}
     </PopUpContainer>
   );
 }
@@ -108,19 +51,6 @@ const PopUpContainer = styled.div`
     /* box-shadow: rgba(219, 255, 0, 0.4) 5px 5px, rgba(219, 255, 0, 0.3) 10px 10px,
       rgba(219, 255, 0, 0.2) 15px 15px, rgba(219, 255, 0, 0.1) 20px 20px,
       rgba(219, 255, 0, 0.05) 25px 25px; */
-
-    &.pop-two {
-      top: 300px;
-      left: 475px;
-      height: 260px;
-    }
-
-    &.pop-three {
-      top: 500px;
-      left: 50px;
-      width: 400px;
-      height: 240px;
-    }
   }
 
   .pop-up-inner {
@@ -181,19 +111,10 @@ const PopUpContainer = styled.div`
       }
     }
 
-    .pop-up-middle {
-      /* position: absolute;
-      bottom: 20px;
-      right: 0;
-      left: 0;
-      top: 20px;
-      height: 100px; */
-    }
-
     .pop-footer {
       position: absolute;
       bottom: 0;
-      padding: 0 0.5rem;
+      padding: 0.5rem;
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
