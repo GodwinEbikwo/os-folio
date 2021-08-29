@@ -41,10 +41,12 @@ export default function Menu({ open }) {
               }),
             }}
           >
-            I AM A DEVELOPER BASED FOCUSED ON CREATING INTERACTIVE DIGITAL
-            EXPERIENCES ON THE WEB. CURRENTLY, I am taking a break off full time
-            employment and going to serve my country. However I am Open to small
-            projects and a chat. (Gotta pay the bills) - Capitalism.
+            Hello, I'm Godwin, I was born and raised in a country called
+            Nigeria. Whilst writing code is what I do to not go broke in a
+            capitalist state, it’s my appreciation for design, music, modern art
+            and family that keeps me going. I spend my free time creating broken
+            layouts, coding them and improving myself because you can never stop
+            learning.
           </SplitText>
 
           <div style={{ marginTop: "var(--spacer)" }}>
@@ -67,9 +69,8 @@ export default function Menu({ open }) {
               }}
             >
               I'M A VERY OUTGOING AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT
-              MUSIC, PHOTOGRAPHY, NATURE, and my dog (oti). I LOVE TO STARE AT A
+              MUSIC, modern art, NATURE, and my dog (oti). I LOVE TO STARE AT A
               NOT-SO-BRIGHT SCREEN WHILE CODING ON A CONSTANT STATE OF FLOW.
-              HERE ARE SOME PLAYLISTS TO GET YOU GOING
             </SplitText>
           </div>
 
@@ -92,8 +93,8 @@ export default function Menu({ open }) {
                 }),
               }}
             >
-              IF YOU'D LIKE TO CHAT, FEEL FREE TO SCHEDULE A CALL OR SEND ME AN
-              E-MAIL.
+              I am always open to hearing about new projects and opportunities
+              so please feel free to get in touch.
             </SplitText>
           </div>
         </m.div>
