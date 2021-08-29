@@ -97,6 +97,28 @@ export default function Menu({ open }) {
               so please feel free to get in touch.
             </SplitText>
           </div>
+
+          <div style={{ marginTop: "var(--spacer)" }} className="tech-grid">
+            <div className="left">
+              <span className="labels">Some technologies I use</span>
+              <ul>
+                <li>React</li>
+                <li>React Native</li>
+                <li>Next.js</li>
+                <li>GraphQL</li>
+                <li>Framer Motion</li>
+              </ul>
+            </div>
+
+            <div className="middle">
+              <span className="labels">Tech I'm currently learning</span>
+              <ul>
+                <li>WebGL</li>
+                <li>Figma</li>
+                <li>GSAP</li>
+              </ul>
+            </div>
+          </div>
         </m.div>
       </MenuRight>
 
@@ -136,6 +158,25 @@ const MenuRight = styled.aside`
     text-transform: uppercase;
     @media (min-width: 768px) {
       font-size: 0.8vw;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      .labels {
+        display: block;
+        margin-bottom: var(--spacing-md);
+
+        &::after {
+          height: 1px;
+          width: 4rem;
+          content: "";
+          display: block;
+          background: var(--white);
+          margin-top: 0.8rem;
+        }
+      }
     }
   }
 
