@@ -160,7 +160,7 @@ const PopUpContainer = styled.div`
           p {
             display: inline-block;
             white-space: nowrap;
-            animation: marquee 35s linear infinite;
+            animation: marquee 55s linear infinite;
             margin-top: 0;
             user-select: none;
             flex-shrink: 0;

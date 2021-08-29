@@ -2,29 +2,32 @@ import styled from "styled-components";
 import { PostPreviewImage } from "./cover-image";
 import Link from "next/link";
 
-export default function PostPreview({ title, coverImage, slug }) {
+export default function PostPreview({ title, coverImage, slug, link }) {
   return (
     <ProjectContainer>
-      <Link href={`/case-studies/${slug}`}>
-        <ProjectLink aria-label={`read more about ${title}`}>
-          <div className="img-container">
-            <div className="img-p">
-              <PostPreviewImage
-                title={title}
-                responsiveImage={coverImage.responsiveImage}
-              />
-            </div>
-
-            <div className="img-c-center">
-              <div className="img-icon" />
-              <p className="img-txt">View</p>
-            </div>
+      <ProjectLink
+        target="_blank"
+        aria-label={`read more about ${title}`}
+        href={link}
+        rel="noopener noreferrer"
+      >
+        <div className="img-container">
+          <div className="img-p">
+            <PostPreviewImage
+              title={title}
+              responsiveImage={coverImage.responsiveImage}
+            />
           </div>
-          <ProjectInfoContainer>
-            <ProjectTitle>{title}</ProjectTitle>
-          </ProjectInfoContainer>
-        </ProjectLink>
-      </Link>
+
+          <div className="img-c-center">
+            <div className="img-icon" />
+            <p className="img-txt">View</p>
+          </div>
+        </div>
+        <ProjectInfoContainer>
+          <ProjectTitle>{title}</ProjectTitle>
+        </ProjectInfoContainer>
+      </ProjectLink>
     </ProjectContainer>
   );
 }
@@ -33,11 +36,6 @@ export const ProjectContainer = styled.li`
   .img-container {
     display: inline-block;
     overflow: hidden;
-
-    /* &:hover .img-p {
-      transition: opacity 1s var(--easing);
-      opacity: 0.2;
-    } */
 
     &:hover .img-txt {
       opacity: 1;
@@ -118,7 +116,7 @@ const ProjectInfoContainer = styled.div`
   padding-bottom: var(--golden-ratio);
 `;
 
-const ProjectTitle = styled.h3`
+const ProjectTitle = styled.h4`
   text-transform: uppercase;
   width: 250px;
   white-space: nowrap;

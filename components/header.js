@@ -70,6 +70,7 @@ export default function Header({ posts, title, responsiveImage }) {
                     title={post.title}
                     coverImage={post.coverImage}
                     slug={post.slug}
+                    link={post.link}
                   />
                 </m.div>
               ))}

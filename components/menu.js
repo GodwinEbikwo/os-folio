@@ -102,57 +102,34 @@ export default function Menu({ open }) {
 
           <div style={{ marginTop: "var(--spacer)" }} className="tech-grid">
             <div className="left">
-              <span className="labels">Some technologies I use</span>
-              <ul>
+              <span className="labels">Socials</span>
+              <div>
                 <FancySpan>
-                  <m.span className="block" variants={revealInOut}>
-                    React
-                  </m.span>
+                  <m.a
+                    variants={revealInOut}
+                    className="link link--ersa inline-block"
+                    aria-label="navigate to instagram"
+                    href="/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </m.a>
                 </FancySpan>
+                
                 <FancySpan>
-                  <m.span className="block" variants={revealInOut}>
-                    React Native
-                  </m.span>
+                  <m.a
+                    variants={revealInOut}
+                    className="link link--ersa inline-block"
+                    aria-label="navigate to instagram"
+                    href="/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Email
+                  </m.a>
                 </FancySpan>
-                <FancySpan>
-                  <m.span className="block" variants={revealInOut}>
-                    Next.js
-                  </m.span>
-                </FancySpan>
-                <FancySpan>
-                  <m.span className="block" variants={revealInOut}>
-                    GraphQL
-                  </m.span>
-                </FancySpan>
-                <FancySpan>
-                  <m.span className="block" variants={revealInOut}>
-                    Framer Motion
-                  </m.span>
-                </FancySpan>
-              </ul>
-            </div>
-
-            <div className="middle">
-              <span className="labels">Tech I'm currently learning</span>
-              <ul>
-                <li>
-                  <FancySpan>
-                    <m.span className="block" variants={revealInOut}>
-                      WebGL
-                    </m.span>
-                  </FancySpan>
-                  <FancySpan>
-                    <m.span className="block" variants={revealInOut}>
-                      Figma
-                    </m.span>
-                  </FancySpan>
-                  <FancySpan>
-                    <m.span className="block" variants={revealInOut}>
-                      GSAP
-                    </m.span>
-                  </FancySpan>
-                </li>
-              </ul>
+              </div>
             </div>
           </div>
         </m.div>
@@ -198,8 +175,8 @@ const MenuRight = styled.aside`
 
     .tech-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
+      grid-template-columns: 1fr;
+
       .labels {
         display: block;
         margin-bottom: var(--spacing-md);
