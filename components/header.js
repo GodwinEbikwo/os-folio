@@ -46,10 +46,10 @@ export default function Header({ posts, title, responsiveImage }) {
                         }),
                       }}
                     >
-                      I AM A DEVELOPER BASED FOCUSED ON CREATING INTERACTIVE
-                      DIGITAL EXPERIENCES ON THE WEB. CURRENTLY, I am taking a
-                      break off full time employment and going to serve my
-                      country. However I am Open to small projects and a chat.
+                      I AM A DEVELOPER FOCUSED ON CREATING INTERACTIVE
+                      DIGITAL EXPERIENCES ON THE WORLD WIDE WEB. CURRENTLY, I am taking a
+                      break FROM full time employment and going to serve my
+                      country (Nigeria). However I am Open to small projects and a chat.
                       (Gotta pay the bills) - Capitalism.
                     </SplitText>
                   </h5>

@@ -34,7 +34,7 @@ export default function Menu({ open }) {
                 y: "0%",
                 opacity: 1,
                 transition: {
-                  duration: 1.4,
+                  duration: 1.8,
                   ease: [0.77, 0, 0.175, 1],
                   delay: i * 0.02,
                 },
@@ -59,7 +59,7 @@ export default function Menu({ open }) {
                   y: "0%",
                   opacity: 1,
                   transition: {
-                    duration: 1.4,
+                    duration: 1.8,
                     ease: [0.77, 0, 0.175, 1],
                     delay: i * 0.03,
                   },
@@ -85,7 +85,7 @@ export default function Menu({ open }) {
                   y: "0%",
                   opacity: 1,
                   transition: {
-                    duration: 1.4,
+                    duration: 1.8,
                     ease: [0.77, 0, 0.175, 1],
                     delay: i * 0.04,
                   },
