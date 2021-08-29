@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { m } from "framer-motion";
 import { SplitText } from "@/helpers/split-text";
+import FancySpan from "./fancy-span";
+import { revealInOut } from "@/helpers/transition";
 
 const variantsAni = {
   enter: {
@@ -102,20 +104,54 @@ export default function Menu({ open }) {
             <div className="left">
               <span className="labels">Some technologies I use</span>
               <ul>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Next.js</li>
-                <li>GraphQL</li>
-                <li>Framer Motion</li>
+                <FancySpan>
+                  <m.span className="block" variants={revealInOut}>
+                    React
+                  </m.span>
+                </FancySpan>
+                <FancySpan>
+                  <m.span className="block" variants={revealInOut}>
+                    React Native
+                  </m.span>
+                </FancySpan>
+                <FancySpan>
+                  <m.span className="block" variants={revealInOut}>
+                    Next.js
+                  </m.span>
+                </FancySpan>
+                <FancySpan>
+                  <m.span className="block" variants={revealInOut}>
+                    GraphQL
+                  </m.span>
+                </FancySpan>
+                <FancySpan>
+                  <m.span className="block" variants={revealInOut}>
+                    Framer Motion
+                  </m.span>
+                </FancySpan>
               </ul>
             </div>
 
             <div className="middle">
               <span className="labels">Tech I'm currently learning</span>
               <ul>
-                <li>WebGL</li>
-                <li>Figma</li>
-                <li>GSAP</li>
+                <li>
+                  <FancySpan>
+                    <m.span className="block" variants={revealInOut}>
+                      WebGL
+                    </m.span>
+                  </FancySpan>
+                  <FancySpan>
+                    <m.span className="block" variants={revealInOut}>
+                      Figma
+                    </m.span>
+                  </FancySpan>
+                  <FancySpan>
+                    <m.span className="block" variants={revealInOut}>
+                      GSAP
+                    </m.span>
+                  </FancySpan>
+                </li>
               </ul>
             </div>
           </div>
@@ -170,7 +206,7 @@ const MenuRight = styled.aside`
 
         &::after {
           height: 1px;
-          width: 4rem;
+          width: 3rem;
           content: "";
           display: block;
           background: var(--white);
