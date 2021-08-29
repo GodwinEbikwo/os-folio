@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { m } from "framer-motion";
 import FancySpan from "./fancy-span";
+import { SplitText } from "@/helpers/split-text";
 
 const variantsAni = {
   enter: {
@@ -13,78 +14,94 @@ const variantsAni = {
   },
 };
 
-const revealIn = {
-  initial: { x: "110%", opacity: 0 },
-  enter: {
-    x: "0%",
-    opacity: 1,
-    transition: {
-      duration: 0.85,
-      ease: [0.77, 0, 0.175, 1],
-    },
-  },
-  exit: {
-    x: "110%",
-    transition: { duration: 0.75, ease: [0.77, 0, 0.175, 1] },
-  },
-};
-
 export default function Menu({ open, setOpen }) {
   return (
     <m.div animate="enter" initial="initial" exit="exit">
       <MenuRight open={open} data-scroll-section>
-        <m.ul
+        <m.div
           className="scroll-container"
           initial={false}
           animate={open ? "enter" : "exit"}
           exit="exit"
           variants={variantsAni}
         >
-          <li>
-            <Link href="/projects">
-              <a
-                aria-label="navigate to the work page"
-                onClick={() => setOpen(!open)}
-              >
-                <FancySpan>
-                  <m.span className="inline-block" variants={revealIn}>
-                    Work
-                  </m.span>
-                </FancySpan>
-              </a>
-            </Link>
-          </li>
+          <SplitText
+            initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+            animate={open ? "enter" : "exit"}
+            exit={{
+              y: "110%",
+            }}
+            variants={{
+              enter: (i) => ({
+                y: "0%",
+                opacity: 1,
+                rotate: "0deg",
+                transition: {
+                  duration: 1.4,
+                  ease: [0.77, 0, 0.175, 1],
+                  delay: i * 0.02,
+                },
+              }),
+            }}
+          >
+            I AM A DEVELOPER BASED FOCUSED ON CREATING INTERACTIVE DIGITAL
+            EXPERIENCES ON THE WEB. CURRENTLY, I am taking a break off full time
+            employment and going to serve my country. However I am Open to small
+            projects and a chat. (Gotta pay the bills) - Capitalism.
+          </SplitText>
 
-          <li>
-            <Link href="/about">
-              <a
-                aria-label="navigate to the about page"
-                onClick={() => setOpen(!open)}
-              >
-                <FancySpan>
-                  <m.span className="inline-block" variants={revealIn}>
-                    About
-                  </m.span>
-                </FancySpan>
-              </a>
-            </Link>
-          </li>
+          <div style={{ marginTop: "2rem" }}>
+            <SplitText
+              initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+              animate={open ? "enter" : "exit"}
+              exit={{
+                y: "110%",
+              }}
+              variants={{
+                enter: (i) => ({
+                  y: "0%",
+                  rotate: "0deg",
+                  opacity: 1,
+                  transition: {
+                    duration: 1.4,
+                    ease: [0.77, 0, 0.175, 1],
+                    delay: i * 0.02,
+                  },
+                }),
+              }}
+            >
+              I'M A VERY OUTGOING AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT
+              MUSIC, PHOTOGRAPHY, NATURE, and my dog (oti). I LOVE TO STARE AT A
+              NOT-SO-BRIGHT SCREEN WHILE CODING ON A CONSTANT STATE OF FLOW.
+              HERE ARE SOME PLAYLISTS TO GET YOU GOING
+            </SplitText>
+          </div>
 
-          <li>
-            <Link href="/contact">
-              <a
-                aria-label="navigate to the contact page"
-                onClick={() => setOpen(!open)}
-              >
-                <FancySpan>
-                  <m.span className="inline-block" variants={revealIn}>
-                    Contact
-                  </m.span>
-                </FancySpan>
-              </a>
-            </Link>
-          </li>
-        </m.ul>
+          <div style={{ marginTop: "2rem" }}>
+            <SplitText
+              initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
+              animate={open ? "enter" : "exit"}
+              exit={{
+                y: "110%",
+              }}
+              variants={{
+                enter: (i) => ({
+                  y: "0%",
+                  rotate: "0deg",
+                  opacity: 1,
+                  transition: {
+                    duration: 1.4,
+                    ease: [0.77, 0, 0.175, 1],
+                    delay: i * 0.02,
+                  },
+                }),
+              }}
+            >
+              IF YOU'D LIKE TO CHAT, FEEL FREE TO SCHEDULE A CALL OR SEND ME AN
+              E-MAIL.
+            </SplitText>
+          </div>
+        </m.div>
       </MenuRight>
 
       <Overlay open={open} />
@@ -100,8 +117,8 @@ const MenuRight = styled.aside`
   bottom: 0;
   width: 100%;
   max-width: 100%;
-  transform: translate3d(100%, 0, 0);
-  transition: transform 1s cubic-bezier(0.77, 0, 0.18, 1) 0.125s;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.77, 0, 0.18, 1) 0.125s;
   will-change: transform;
   z-index: 5;
 
@@ -111,12 +128,17 @@ const MenuRight = styled.aside`
 
   ${(props) =>
     props.open &&
-    `transform: translate3d(0, 0, 0); 
-      transition: transform 1s cubic-bezier(.76,0,.24,1);
+    `opacity: 1; 
+      transition: opacity 1s cubic-bezier(.76,0,.24,1);
       cursor: pointer;
     `};
 
   .scroll-container {
+    padding: calc(var(--spacer-lg) * 1.5) var(--golden-ratio);
+    line-height: 1.55;
+  }
+
+  /* .scroll-container {
     padding: calc(var(--spacer-lg) * 1.5) var(--spacer);
 
     &:hover > li {
@@ -142,7 +164,7 @@ const MenuRight = styled.aside`
         }
       }
     }
-  }
+  } */
 `;
 
 export const Overlay = styled.div`
@@ -156,7 +178,7 @@ export const Overlay = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(36px) saturate(180%);
   background-color: rgba(10, 10, 10, 0.5);
   z-index: 4;
   transition: opacity 1s cubic-bezier(0.77, 0, 0.18, 1),
