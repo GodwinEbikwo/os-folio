@@ -64,13 +64,13 @@ export default function Header({ posts, title, responsiveImage }) {
         <HeaderWork className="h-work">
           <div className="h-work-content">
             {posts.map((post) => (
-              <m.div className="h-work-middle" key={post.slug}>
+              <m.ul className="h-work-middle" key={post.slug}>
                 <PostPreview
                   title={post.title}
                   coverImage={post.coverImage}
                   link={post.link}
                 />
-              </m.div>
+              </m.ul>
             ))}
 
             <m.div
