@@ -43,12 +43,10 @@ export default function Menu({ open }) {
               }),
             }}
           >
-            Hello, I'm Godwin, I was born and raised in a country called
-            Nigeria. Whilst writing code is what I do to not go broke in a
-            capitalist state, it’s my appreciation for design, music, modern art
-            and family that keeps me going. I spend my free time creating broken
-            layouts, coding them and improving myself because you can never stop
-            learning.
+            Hello, I'm Godwin AKA as (Mars-Mathew), I was born and raised in a
+            country called Nigeria. Whilst writing code is what I do to not go
+            broke in a capitalist state, it’s my appreciation for design, music,
+            modern art and family that keeps me going.
           </SplitText>
 
           <div style={{ marginTop: "var(--spacer)" }}>
@@ -70,9 +68,10 @@ export default function Menu({ open }) {
                 }),
               }}
             >
-              I'M A VERY OUTGOING AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT
-              MUSIC, modern art, NATURE, and my dog (oti). I LOVE TO STARE AT A
-              NOT-SO-BRIGHT SCREEN WHILE CODING ON A CONSTANT STATE OF FLOW.
+              I spend my free time creating broken layouts, coding them and
+              improving myself because you can never stop learning. I'M A VERY
+              OUTGOING AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT MUSIC, modern
+              art, NATURE, and my dog (oti).
             </SplitText>
           </div>
 
@@ -95,8 +94,9 @@ export default function Menu({ open }) {
                 }),
               }}
             >
-              I am always open to hearing about new projects and opportunities
-              so please feel free to get in touch.
+              I LOVE TO STARE AT A NOT-SO-BRIGHT SCREEN WHILE CODING ON A
+              CONSTANT STATE OF FLOW. I am always open to hearing about new
+              projects and opportunities so please feel free to get in touch.
             </SplitText>
           </div>
 
@@ -113,10 +113,10 @@ export default function Menu({ open }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Instagram
+                    Email
                   </m.a>
                 </FancySpan>
-                
+
                 <FancySpan>
                   <m.a
                     variants={revealInOut}
@@ -126,7 +126,33 @@ export default function Menu({ open }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Email
+                    Github
+                  </m.a>
+                </FancySpan>
+
+                <FancySpan>
+                  <m.a
+                    variants={revealInOut}
+                    className="link link--ersa inline-block"
+                    aria-label="navigate to instagram"
+                    href="/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </m.a>
+                </FancySpan>
+
+                <FancySpan>
+                  <m.a
+                    variants={revealInOut}
+                    className="link link--ersa inline-block"
+                    aria-label="navigate to instagram"
+                    href="/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
                   </m.a>
                 </FancySpan>
               </div>
