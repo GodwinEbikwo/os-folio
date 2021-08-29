@@ -1,7 +1,5 @@
-import Link from "next/link";
 import styled from "styled-components";
 import { m } from "framer-motion";
-import FancySpan from "./fancy-span";
 import { SplitText } from "@/helpers/split-text";
 
 const variantsAni = {
@@ -14,7 +12,7 @@ const variantsAni = {
   },
 };
 
-export default function Menu({ open, setOpen }) {
+export default function Menu({ open }) {
   return (
     <m.div animate="enter" initial="initial" exit="exit">
       <MenuRight open={open} data-scroll-section>
@@ -50,7 +48,7 @@ export default function Menu({ open, setOpen }) {
             projects and a chat. (Gotta pay the bills) - Capitalism.
           </SplitText>
 
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: "var(--spacer)" }}>
             <SplitText
               initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
               animate={open ? "enter" : "exit"}
@@ -77,7 +75,7 @@ export default function Menu({ open, setOpen }) {
             </SplitText>
           </div>
 
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: "var(--spacer)" }}>
             <SplitText
               initial={{ y: "110%", opacity: 0, rotate: "8deg" }}
               animate={open ? "enter" : "exit"}
@@ -124,6 +122,7 @@ const MenuRight = styled.aside`
 
   @media (min-width: 768px) {
     max-width: 35%;
+    background: var(--bg);
   }
 
   ${(props) =>
@@ -136,6 +135,10 @@ const MenuRight = styled.aside`
   .scroll-container {
     padding: calc(var(--spacer-lg) * 1.5) var(--golden-ratio);
     line-height: 1.55;
+    text-transform: uppercase;
+    @media (min-width: 768px) {
+     font-size: 0.8vw;
+    }
   }
 
   /* .scroll-container {
