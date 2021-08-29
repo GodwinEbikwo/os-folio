@@ -62,7 +62,7 @@ export default function PopUp() {
           </div>
         </div>
       </div> */}
-{/* 
+      {/* 
       <div className="pop-up pop-three">
         <div className="pop-up-inner">
           <div className="pop-up-header">
@@ -99,12 +99,15 @@ const PopUpContainer = styled.div`
   .pop-up {
     text-transform: uppercase;
     position: absolute;
-    top: 100px;
-    left: 10%;
+    top: 35%;
+    left: 35%;
     height: 300px;
     z-index: -1;
     user-select: auto;
     width: 308px;
+    /* box-shadow: rgba(219, 255, 0, 0.4) 5px 5px, rgba(219, 255, 0, 0.3) 10px 10px,
+      rgba(219, 255, 0, 0.2) 15px 15px, rgba(219, 255, 0, 0.1) 20px 20px,
+      rgba(219, 255, 0, 0.05) 25px 25px; */
 
     &.pop-two {
       top: 300px;
