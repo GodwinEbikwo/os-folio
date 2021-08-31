@@ -484,6 +484,31 @@ html,
     }
   }
 
+  .animate-bg{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 20;
+  
+  }
+
+
+  .img-bg{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+
   .bg-full {
     top: 0;
     right: 0;
@@ -493,7 +518,7 @@ html,
     height: 87vh;
     width: 100vw;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
     @media (min-width: 768px) {
       position: sticky;
       height: 100vh;

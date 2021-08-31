@@ -25,6 +25,7 @@ export default function Menu({ open }) {
           exit="exit"
           variants={variantsAni}
         >
+          <span className="labels block">BIOGRAPHY</span>
           <SplitText
             initial={{ y: "110%", opacity: 0 }}
             animate={open ? "enter" : "exit"}
@@ -43,10 +44,10 @@ export default function Menu({ open }) {
               }),
             }}
           >
-            Hello, I'm Godwin AKA as (Mars-Mathew), I was born and raised in a
+            Hello, I'm Godwin AKA (Mars-Mathew), I was born and raised in a
             country called Nigeria. Whilst writing code is what I do to not go
-            broke in a capitalist state, it’s my appreciation for design, music,
-            modern art and family that keeps me going.
+            broke in a capitalist state, it’s my appreciation for design, music
+            and modern art that keeps me going.
           </SplitText>
 
           <div style={{ marginTop: "var(--spacer)" }}>
@@ -68,10 +69,9 @@ export default function Menu({ open }) {
                 }),
               }}
             >
-              I spend my free time creating broken layouts, coding them and
-              improving myself because you can never stop learning. I'M A VERY
-              OUTGOING AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT MUSIC, modern
-              art, NATURE, and my dog (oti).
+              I spend my free time creating broken layouts, coding and improving
+              myself because you can never stop learning. I'M A VERY OUTGOING
+              AND CURIOUS PERSON, WHO'S PASSIONATE ABOUT my dog (oti).
             </SplitText>
           </div>
 
@@ -103,59 +103,57 @@ export default function Menu({ open }) {
           <div style={{ marginTop: "var(--spacer)" }} className="tech-grid">
             <div className="left">
               <span className="labels">Socials</span>
-              <div>
-                <FancySpan>
-                  <m.a
-                    variants={revealInOut}
-                    className="link link--ersa inline-block"
-                    aria-label="navigate to instagram"
-                    href="/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Email
-                  </m.a>
-                </FancySpan>
+              <FancySpan>
+                <m.a
+                  variants={revealInOut}
+                  className="link link--ersa inline-block"
+                  aria-label="navigate to instagram"
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Email
+                </m.a>
+              </FancySpan>
 
-                <FancySpan>
-                  <m.a
-                    variants={revealInOut}
-                    className="link link--ersa inline-block"
-                    aria-label="navigate to instagram"
-                    href="/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Github
-                  </m.a>
-                </FancySpan>
+              <FancySpan>
+                <m.a
+                  variants={revealInOut}
+                  className="link link--ersa inline-block"
+                  aria-label="navigate to instagram"
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </m.a>
+              </FancySpan>
 
-                <FancySpan>
-                  <m.a
-                    variants={revealInOut}
-                    className="link link--ersa inline-block"
-                    aria-label="navigate to instagram"
-                    href="/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Twitter
-                  </m.a>
-                </FancySpan>
+              <FancySpan>
+                <m.a
+                  variants={revealInOut}
+                  className="link link--ersa inline-block"
+                  aria-label="navigate to instagram"
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter (coming soon)
+                </m.a>
+              </FancySpan>
 
-                <FancySpan>
-                  <m.a
-                    variants={revealInOut}
-                    className="link link--ersa inline-block"
-                    aria-label="navigate to instagram"
-                    href="/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </m.a>
-                </FancySpan>
-              </div>
+              <FancySpan>
+                <m.a
+                  variants={revealInOut}
+                  className="link link--ersa inline-block"
+                  aria-label="navigate to instagram"
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram (coming soon)
+                </m.a>
+              </FancySpan>
             </div>
           </div>
         </m.div>
@@ -198,23 +196,27 @@ const MenuRight = styled.aside`
     @media (min-width: 768px) {
       font-size: 0.8vw;
     }
+    .labels {
+      display: block;
+      margin-bottom: var(--spacing-md);
+
+      &::after {
+        height: 1px;
+        width: 3rem;
+        content: "";
+        display: block;
+        background: var(--white);
+        margin-top: 0.8rem;
+      }
+    }
 
     .tech-grid {
       display: grid;
       grid-template-columns: 1fr;
-
-      .labels {
-        display: block;
-        margin-bottom: var(--spacing-md);
-
-        &::after {
-          height: 1px;
-          width: 3rem;
-          content: "";
-          display: block;
-          background: var(--white);
-          margin-top: 0.8rem;
-        }
+    }
+    .left {
+      & > span {
+        margin-bottom: 0.5em;
       }
     }
   }
