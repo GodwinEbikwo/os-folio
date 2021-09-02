@@ -59,8 +59,8 @@ const PopUpContainer = styled.div`
     right: 0;
     left: 0;
     top: 0;
-    background-color: var(--black);
-    border: 3px solid var(--accent-1);
+    background-color: var(--bg);
+    border: 3px solid var(--bg);
     overflow: hidden;
     border-top: none;
 
@@ -68,14 +68,13 @@ const PopUpContainer = styled.div`
       display: flex;
       justify-content: space-between;
       cursor: grab;
-      border-top: 3px solid var(--color);
+      border-bottom: 1px solid var(--text-color);
       top: 0;
-      background: var(--accent-1);
+      background: var(--bg);
       padding: 0.5rem;
 
       & > span {
         display: inline-block;
-        color: black;
       }
 
       .banner {
@@ -83,7 +82,6 @@ const PopUpContainer = styled.div`
         justify-content: space-between;
         align-items: center;
         position: relative;
-        color: black;
 
         .banner_inner {
           width: 100%;
@@ -118,8 +116,7 @@ const PopUpContainer = styled.div`
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
-      background: var(--accent-1);
-      color: black;
+      background: var(--bg);
     }
   }
 `;

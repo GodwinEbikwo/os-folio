@@ -75,7 +75,7 @@ export default function Header({ posts, title, responsiveImage }) {
 
             <m.div
               className="h-work-middle"
-              style={{ backgroundColor: "var(--bg)", height: "100vh" }}
+              style={{ backgroundColor: "inherit", height: "100vh" }}
             >
               <PopUp />
             </m.div>
@@ -117,7 +117,7 @@ const HeaderWork = styled(m.aside)`
       top: 0;
       height: 66.666666vh;
       backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgba(10, 10, 10, 0.75);
+      /* background-color: rgba(10, 10, 10, 0.75); */
 
       @media (min-width: 700px) {
         height: 100vh;

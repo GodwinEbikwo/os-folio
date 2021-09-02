@@ -4,6 +4,7 @@ import Burger from "./burger";
 import { useState } from "react";
 import styled from "styled-components";
 import { m, LazyMotion, domAnimation } from "framer-motion";
+import ThemeSwitch from "./theme-switcher";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function Nav() {
                 <h4 className="h-nav-labels">MM ❊</h4>
               </a>
             </Link>
+            <ThemeSwitch />
             <div className="hide-for-mobile">
               <Burger open={open} setOpen={setOpen} />
             </div>

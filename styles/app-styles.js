@@ -49,6 +49,32 @@ export const AppStyles = createGlobalStyle`
   --easing: cubic-bezier(0.215, 0.61, 0.355, 1);  
 }
 
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --text-white: #f7f7f7;
+}
+
+[data-theme="blue"] {
+  --bg: hsla(248, 85%, 35%, 100%);
+  --text-white: hsla(209, 30%, 80%, 100%);
+}
+
+[data-theme="yellow"] {
+  --bg: hsla(52, 99%, 56%, 100%);
+  --text-white: hsla(223, 87%, 42%, 100%);
+}
+
+[data-theme="red"] {
+  --bg: hsla(2, 89%, 58%, 100%);
+  --text-white: hsla(137, 32%, 93%, 100%);
+}
+
+[data-theme="pink"] {
+  --bg: hsla(310, 81%, 85%, 100%);
+  --text-white: hsla(0, 95%, 47%, 100%);
+}
+
+
 *,
 *::before,
 *::after {
@@ -224,8 +250,6 @@ html,
       touch-action: none;
     }    
 }
-
-
 
   li,
   ul {
