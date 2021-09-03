@@ -14,9 +14,9 @@ export default function Header({ posts, title, responsiveImage }) {
           <HeaderInfoContent>
             <HeaderInfoContentTop>
               <HeaderInfoContentTopTitle>
-                <span>Mars</span>
+                <span>Godwin</span>
                 <br />
-                <span>Mathew</span>
+                <span>Ebikwo</span>
               </HeaderInfoContentTopTitle>
 
               <div className="h-about-me">

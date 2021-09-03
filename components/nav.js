@@ -15,7 +15,7 @@ export default function Nav() {
           <div className="flex space-between align-center px-2">
             <Link href="/">
               <a>
-                <h4 className="h-nav-labels">MM ❊</h4>
+                <h4 className="h-nav-labels">GE ❊</h4>
               </a>
             </Link>
             <ThemeSwitch />
