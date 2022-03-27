@@ -1,0 +1,270 @@
+@font-face {
+  font-family: Supply;
+  src: url("/Supply-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --py-2: 1rem;
+  --px-2: 1rem;
+  --golden-ratio: 1.75rem;
+  --max-width: 100rem;
+
+  --bg: hsl(155 30% 98.8%);
+  --text-color: #222;
+  --border-color: rgba(0, 0, 0, 0.1);
+
+  --font: "SF Pro Text", "SF Pro Icons", ui-sans-serif, Helvetica, sans-serif;
+
+  --size-300: clamp(0.8rem, 0.85rem + 0.24vw, 0.85rem);
+  --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+  --size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  --size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+  --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+  --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+  --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+  --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+
+  --font-xsm: 300;
+  --font-sm: 400;
+  --font-md: 500;
+  --font-lg: 600;
+
+  --ls-xsm: -0.015em;
+  --ls-sm: -0.02em;
+  --ls-md: -0.035em;
+  --ls-lg: -0.05em;
+
+  --spacer-half: 1rem;
+  --spacer: 2rem;
+  --spacer-md: 3rem;
+  --spacer-lg: 5rem;
+  --easing: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+svg,
+img,
+strong,
+ol,
+ul,
+li,
+form,
+aside,
+article,
+footer,
+header,
+input,
+optgroup,
+select,
+textarea,
+fieldset,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  overflow-x: auto;
+  line-height: 1.5;
+  font-family: var(--font);
+  font-weight: normal;
+  font-size: var(--size-300);
+  color: var(--text-color);
+  transition: all 300ms;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1 {
+  letter-spacing: var(--ls-md);
+  line-height: 1;
+  font-size: var(--size-800);
+}
+
+h2 {
+  font-size: var(--size-700);
+}
+
+h3 {
+  font-size: var(--size-600);
+}
+
+h4,
+h5 {
+  font-size: var(--size-500);
+}
+
+@media (max-width: 767px) {
+  h4 {
+    font-size: var(--size-400);
+  }
+}
+
+p {
+  hyphens: auto;
+  word-break: break-word;
+  font-family: var(--font2);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.relative {
+  position: relative;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  color: inherit;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: "";
+}
+
+.link--io {
+  font-family: europa, sans-serif;
+}
+
+.link--io::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.link--io:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}
+
+.link--io::after {
+  content: "";
+  top: calc(100% + 4px);
+  transform-origin: 0% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.link--io:hover::after {
+  transform-origin: 100% 50%;
+  transform: scale3d(1, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}

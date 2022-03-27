@@ -1,0 +1,26 @@
+.imgContainer {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--golden-ratio);
+  padding-bottom: var(--golden-ratio);
+}
+
+.title {
+  text-transform: uppercase;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: var(--font-md);
+}

@@ -1,0 +1,19 @@
+.root {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  max-width: var(--max-width);
+}
+
+.nav {
+  padding: var(--px-2);
+}
+
+.logo {
+  mix-blend-mode: difference;
+  color: var(--bg);
+  z-index: 20;
+  text-transform: uppercase;
+}

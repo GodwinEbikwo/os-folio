@@ -1,0 +1,6 @@
+.main {
+  /* width: min(100% - 2rem, 70rem); */
+  position: relative;
+  margin-inline: auto;
+  max-width: var(--max-width);
+}

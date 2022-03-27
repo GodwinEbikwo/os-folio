@@ -1,42 +1,24 @@
-import { ContainerBox } from "@/components/container";
-import { LazyMotion, domAnimation, m } from "framer-motion";
-import Nav from "@/components/nav";
-import Layout from "@/components/layout";
-import Header from "@/components/header";
-import { getAllPostsForHome, getImageForHome } from "@/lib/api";
+import { m } from "framer-motion";
+import { getAllPostsForHome } from "@lib/api";
+import Layout from "@components/Layout";
+import Hero from "@components/Hero";
 
-export default function HomePage({ allPosts, homeImage }) {
+export default function HomePage({ allPosts }) {
   const headerPost = allPosts;
-  const homePhoto = homeImage;
+
   return (
     <Layout>
-      <Nav />
-      <main>
-        <section>
-          <LazyMotion features={domAnimation}>
-            <m.aside initial="initial" animate="enter" exit="exit">
-              <ContainerBox>
-                {headerPost.length > 0 && (
-                  <Header
-                    posts={headerPost}
-                    title={homePhoto.title}
-                    responsiveImage={homePhoto.responsiveImage}
-                  />
-                )}
-              </ContainerBox>
-            </m.aside>
-          </LazyMotion>
-        </section>
-      </main>
+      <m.div initial="initial" animate="enter" exit="exit">
+        {headerPost.length > 0 && <Hero posts={headerPost} />}
+      </m.div>
     </Layout>
   );
 }
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) || [];
-  const homeImage = (await getImageForHome()) || [];
   return {
     revalidate: 200,
-    props: { allPosts, homeImage },
+    props: { allPosts },
   };
 }
