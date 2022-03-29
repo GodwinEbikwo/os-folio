@@ -1,0 +1,51 @@
+.nowPlaying {
+  width: 18rem;
+  padding: 0.4rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--border-color);
+}
+
+.pholderImg {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.view {
+  margin-top: 0.35rem;
+  margin-left: 0.75rem;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.truncate {
+  margin-top: 0.25em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 10rem;
+  font-size: 13.5px;
+  margin-bottom: 0;
+  text-transform: capitalizes;
+}
+
+.para {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0.1rem 0;
+  width: 12rem;
+  font-size: 13.5px;
+}
+
+.logo {
+  width: 1rem;
+  margin-left: auto;
+  margin-top: 0.25rem;
+  height: 1rem;
+  display: block;
+  overflow: hidden;
+}

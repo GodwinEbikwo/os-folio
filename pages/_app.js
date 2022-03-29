@@ -1,9 +1,13 @@
 import "@styles/main.css";
+import { SessionProvider } from "next-auth/react";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-export default function App({ Component, pageProps }) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   const router = useRouter();
   return (
     <>
@@ -17,9 +21,12 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="description" content="" />
       </Head>
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.asPath} />
-      </AnimatePresence>
+
+      <SessionProvider session={session}>
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.asPath} />
+        </AnimatePresence>
+      </SessionProvider>
     </>
   );
 }

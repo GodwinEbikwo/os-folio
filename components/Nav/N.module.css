@@ -13,7 +13,7 @@
 
 .logo {
   mix-blend-mode: difference;
-  color: var(--bg);
+  color: white;
   z-index: 20;
   text-transform: uppercase;
 }

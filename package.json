@@ -20,10 +20,12 @@
     "date-fns": "^2.23.0",
     "framer-motion": "^6.2.8",
     "next": "^12.1.0",
+    "next-auth": "^4.3.1",
     "preact": "^10.5.14",
     "react": "17.0.2",
     "react-datocms": "^1.6.3",
     "react-div-100vh": "^0.6.0",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "swr": "^1.2.2"
   }
 }

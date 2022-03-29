@@ -1,7 +1,7 @@
 module.exports = {
   swcMinify: true,
   images: {
-    domains: ["res.cloudinary.com", "www.datocms-assets.com"],
+    domains: ["res.cloudinary.com", "www.datocms-assets.com", "i.scdn.co"],
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build

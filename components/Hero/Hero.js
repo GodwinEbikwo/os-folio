@@ -3,6 +3,7 @@ import s from "./H.module.css";
 import FancySpan from "@components/fancy-span";
 import { m } from "framer-motion";
 import FancyLink from "@components/fancy-link";
+import Nowplaying from "@components/nowplaying";
 
 export const revealIn = {
   initial: {
@@ -13,7 +14,7 @@ export const revealIn = {
     y: "0%",
     opacity: 1,
     transition: {
-      duration: 1.25,
+      duration: 1,
       ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
@@ -96,6 +97,10 @@ export default function Hero({ posts }) {
               </FancySpan>
             </li>
           </ul>
+
+          <div className="center-absolute">
+            <Nowplaying />
+          </div>
 
           <div className={s.aboutMe}>
             <m.h2 className={s.aboutMeTitle}>
