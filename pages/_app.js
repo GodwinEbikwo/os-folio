@@ -19,9 +19,11 @@ export default function App({
           content="Godwin Ebikwo - Personal Site"
           key="title"
         />
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="A personal website and showcase on the very things I have learnt on my journey react, music front-end developer, shopify, e-commerce, ecommerce next js"
+        />
       </Head>
-
       <SessionProvider session={session}>
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.asPath} />

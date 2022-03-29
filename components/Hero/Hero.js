@@ -3,7 +3,7 @@ import s from "./H.module.css";
 import FancySpan from "@components/fancy-span";
 import { m } from "framer-motion";
 import FancyLink from "@components/fancy-link";
-import Nowplaying from "@components/nowplaying";
+import Nowplaying from "@components/NowPlaying";
 
 export const revealIn = {
   initial: {

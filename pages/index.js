@@ -3,11 +3,8 @@ import { getAllPostsForHome } from "@lib/api";
 import Layout from "@components/Layout";
 import Hero from "@components/Hero";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState, useEffect } from "react";
-import Nowplaying from "../components/nowplaying";
-import Image from "next/image";
 
-export default function HomePage({ allPosts, items }) {
+export default function HomePage({ allPosts }) {
   const headerPost = allPosts;
   const { data: session } = useSession();
 
