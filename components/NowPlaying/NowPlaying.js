@@ -2,12 +2,32 @@ import Image from "next/image";
 import s from "./now.module.css";
 import useSWR from "swr";
 import Fetcher from "@lib/fetcher";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Nowplaying() {
   const { data, error } = useSWR("/api/now-playing", Fetcher);
-  if (error) return <span>failed to load</span>;
+
+  const { data: session } = useSession();
+
+  function renderAuthButtons() {
+    if (session) {
+      return (
+        <button onClick={() => signOut()} className="cursor-pointer">
+          Sign out
+        </button>
+      );
+    } else {
+      return (
+        <button onClick={() => signIn()} className="cursor-pointer">
+          Sign in
+        </button>
+      );
+    }
+  }
+
+  if (error) return <span> {renderAuthButtons()}</span>;
   if (!data) return <span>loading...</span>;
-  console.log(error);
+
   return (
     <div className={s.root}>
       <Image
