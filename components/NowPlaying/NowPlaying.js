@@ -7,7 +7,7 @@ export default function Nowplaying() {
   const { data, error } = useSWR("/api/now-playing", Fetcher);
   if (error) return <span>failed to load</span>;
   if (!data) return <span>loading...</span>;
-
+  console.log(error);
   return (
     <div className={s.root}>
       <Image
