@@ -6,6 +6,7 @@ const handler = async (req, res) => {
     token: { accessToken },
   } = await getSession({ req });
   const response = await getTopArtists(accessToken);
+
   const { items } = await response.json();
   return res.status(200).json({ items });
 };

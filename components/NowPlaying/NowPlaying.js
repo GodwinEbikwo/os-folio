@@ -6,6 +6,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Nowplaying() {
   const { data, error } = useSWR("/api/now-playing", Fetcher);
+  console.log(data);
 
   const { data: session } = useSession();
 

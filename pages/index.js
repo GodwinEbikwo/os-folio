@@ -5,7 +5,6 @@ import Hero from "@components/Hero";
 
 export default function HomePage({ allPosts }) {
   const headerPost = allPosts;
-
   return (
     <Layout>
       <m.div initial="initial" animate="enter" exit="exit">
