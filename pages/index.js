@@ -8,22 +8,19 @@ export default function HomePage({ allPosts }) {
   const headerPost = allPosts;
   const { data: session } = useSession();
 
-  if (session) {
-    return (
-      <Layout>
-        <m.div initial="initial" animate="enter" exit="exit">
-          {headerPost.length > 0 && <Hero posts={headerPost} />}
-        </m.div>
-      </Layout>
-    );
+  function renderAuthButtons() {
+    if (session) {
+      return <button onClick={() => signIn("spotify")}>Sign out</button>;
+    } else {
+      return <button onClick={() => signIn()}>Sign in</button>;
+    }
   }
 
   return (
     <Layout>
       <m.div initial="initial" animate="enter" exit="exit">
+        {renderAuthButtons()}
         {headerPost.length > 0 && <Hero posts={headerPost} />}
-        Not signed in <br />
-        <button onClick={() => signIn()}>Sign in</button>
       </m.div>
     </Layout>
   );
