@@ -93,6 +93,7 @@
   top: var(--px-2);
   right: var(--spacer);
   text-transform: uppercase;
+  z-index: 100;
 }
 
 @media (min-width: 700px) {

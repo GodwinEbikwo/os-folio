@@ -64,44 +64,34 @@ export default function Hero({ posts }) {
             <li>
               <FancySpan>
                 <m.span variants={revealIn} className="block">
-                  <FancyLink
-                    destination="/"
-                    a11yText="Navigate to the Email page"
-                    label="Email"
+                  <a
+                    aria-label="send an email godwin ebikwo"
+                    href="mailto:godwin.a.ebikwo@egmail.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="link link--io"
-                  />
+                  >
+                    Email
+                  </a>
                 </m.span>
               </FancySpan>
             </li>
             <li>
               <FancySpan>
                 <m.span variants={revealIn} className="block">
-                  <FancyLink
-                    destination="/"
-                    a11yText="Navigate to the Github page"
-                    label="Github"
+                  <a
+                    aria-label="Navigate to the Github page"
+                    href="http://github.com/GodwinEbikwo/"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="link link--io"
-                  />
-                </m.span>
-              </FancySpan>
-            </li>
-            <li>
-              <FancySpan>
-                <m.span variants={revealIn} className="block">
-                  <FancyLink
-                    destination="/Instagram"
-                    a11yText="Navigate to the Instagram page"
-                    label="Instagram"
-                    className="link link--io"
-                  />
+                  >
+                    Github
+                  </a>
                 </m.span>
               </FancySpan>
             </li>
           </ul>
-
-          {/* <div className="center-absolute">
-            <Nowplaying />
-          </div> */}
 
           <div className={s.aboutMe}>
             <m.h2 className={s.aboutMeTitle}>
