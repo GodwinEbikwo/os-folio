@@ -2,9 +2,9 @@ import { PostPreviewImage } from "./cover-image";
 import Link from "next/link";
 import s from "./p.module.css";
 
-export default function PostPreview({ title, coverImage, link }) {
+export default function PostPreview({ title, coverImage, slug }) {
   return (
-    <Link href={link}>
+    <Link href={`/work/${slug}`}>
       <a
         className={s.link}
         target="_blank"

@@ -39,14 +39,15 @@ export default function Hero({ posts }) {
         <div className={s.workContent}>
           {posts.map((post) => (
             <div
-              className={s.workMiddle}
               key={post.slug}
+              className={s.workMiddle}
               style={{ background: post.backgroundcolor.hex }}
             >
               <PostPreview
                 title={post.title}
                 coverImage={post.coverImage}
                 link={post.link}
+                slug={post.slug}
               />
             </div>
           ))}

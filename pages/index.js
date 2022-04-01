@@ -4,11 +4,11 @@ import Layout from "@components/Layout";
 import Hero from "@components/Hero";
 
 export default function HomePage({ allPosts }) {
-  const headerPost = allPosts;
+  const post = allPosts;
   return (
     <Layout>
       <m.div initial="initial" animate="enter" exit="exit">
-        {headerPost.length > 0 && <Hero posts={headerPost} />}
+        {post.length > 0 && <Hero posts={post} />}
       </m.div>
     </Layout>
   );

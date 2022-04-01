@@ -1,0 +1,22 @@
+.markdown {
+  letter-spacing: var(--ls-sm);
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  all: inherit;
+  font-family: var(--font) !important;
+  line-height: 1.6;
+  font-size: var(--size-600);
+  text-transform: initial;
+}
+
+.markdown h2 {
+  all: inherit;
+}
+
+.markdown h3 {
+  all: inherit;
+}
