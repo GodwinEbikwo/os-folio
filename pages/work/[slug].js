@@ -12,7 +12,7 @@ export default function Post({ post }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout hasNav={false} hasFooter={false}>
+    <Layout hasNav={false}>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
