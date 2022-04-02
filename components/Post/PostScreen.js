@@ -18,7 +18,6 @@ export default function PostScreen({
   return (
     <section className={styles.project} style={{ backgroundColor: bc }}>
       <div className={styles.container}>
-        <div>Back</div>
         <div className={styles.box}>
           <div className={styles.leftSide}>
             <div className={styles.leftSideImg}>
