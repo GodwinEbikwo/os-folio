@@ -5,12 +5,7 @@ import s from "./p.module.css";
 export default function PostPreview({ title, coverImage, slug }) {
   return (
     <Link href={`/work/${slug}`}>
-      <a
-        className={s.link}
-        target="_blank"
-        aria-label={`read more about ${title}`}
-        rel="noopener noreferrer"
-      >
+      <a className={s.link} aria-label={`read more about ${title}`}>
         <div className={s.imgContainer}>
           <PostPreviewImage
             title={title}

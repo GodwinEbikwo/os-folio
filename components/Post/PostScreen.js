@@ -1,6 +1,7 @@
 import styles from "./ps.module.css";
 import CoverImage from "@components/PostPreview/cover-image";
 import PostBody from "./PostBody";
+import Link from "next/link";
 
 export default function PostScreen({
   title,
@@ -17,6 +18,7 @@ export default function PostScreen({
   return (
     <section className={styles.project} style={{ backgroundColor: bc }}>
       <div className={styles.container}>
+        <div>Back</div>
         <div className={styles.box}>
           <div className={styles.leftSide}>
             <div className={styles.leftSideImg}>
@@ -108,6 +110,31 @@ export default function PostScreen({
             </div>
             <PostBody content={content} />
           </div>
+        </div>
+      </div>
+
+      <div
+        style={{
+          margin: "0 auto",
+          maxWidth: "85rem",
+          width: "100%",
+          padding: "1rem 0 1rem 0",
+          borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+          backgroundColor: "inherit",
+        }}
+      >
+        <div style={{ margin: "1rem 0 1rem .5rem" }}>
+          <Link href="/">
+            <a
+              aria-label="go back home"
+              style={{
+                fontWeight: "500",
+                fontSize: "1rem",
+              }}
+            >
+              ← Back home
+            </a>
+          </Link>
         </div>
       </div>
     </section>
