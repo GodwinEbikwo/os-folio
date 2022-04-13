@@ -25,7 +25,7 @@ export default function App({
       </Head>
 
       <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.asPath} />
+        <Component {...pageProps} />
       </AnimatePresence>
     </>
   );
